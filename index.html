@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindFit</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">MINFIT GAMES</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#carouselSection">INICIO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gamesSection">JUEGOS</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header class="text-center">
+        <h1>MINDFIT GAMES</h1>
+    </header>
+    <main class="container my-5">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                        <h2 class="textCar">Idea</h2>
+                        <p>Estos juegos están destinados a estimular habilidades mentales como la memoria, 
+                            la atención y la resolución de problemas, contribuyendo así a mejorar la salud mental y el bienestar de los usuarios. 
+                            La página web proporcionará una experiencia interactiva y accesible, ofrecer una plataforma 
+                            entretenida y beneficiosa para aquellos que buscan fortalecer sus capacidades cognitivas.</p>
+                        <img src="img/2149432892.jpg" alt="Imagen relacionada con la idea" class="img">                    
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                        <h2 class="textCar">Alcance</h2>
+                        <p>Mindfit Games, se centra en la creación de dos juegos interactivos y educativos diseñados para mejorar la memoria y la concentración en niños entre 5 a 13 años.</p>
+                        <img src="img/2147781928.jpg" alt="Imagen relacionada con el alcance" class="img">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                        <h2 class="textCar">Usuario Final</h2>
+                        <p>Niños de entre 5 a 13 años que quieran mejorar su memoria y concentración mientras juegan y se divierten</p>
+                        <img src="img/usuario.jpg" alt="Imagen relacionada con el usuario" class="img">
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+        <div id="gamesSection" class="game-section">
+            <h2 class="text-center">JUEGOS</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div onclick="location.href='juego1.html'" class="game-card">
+                        <h3>Parejas de Memoria</h3>
+                        <img src="img/PortadaJuegoMemoria.png" alt="Juego de Parejas de Memoria" onclick="location.href='juego1.html'">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div onclick="location.href='juego2.html'" class="game-card">
+                        <h3>Rompecabezas</h3>
+                        <img src="img/PortadaRompecabezas.png" alt="Juego Rompecabezas" onclick="location.href='juego2.html'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-light text-center py-4">
+        <p>&copy; 2024 Juegos de Memoria. Todos los derechos reservados.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+

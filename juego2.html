@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rompecabezas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/rompecabeza.css">  
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">MINDFIT GAMES</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<header class="text-center">
+    <h1>Rompecabezas</h1>
+</header>
+<body>
+        <div class="container">
+            <p>Seleccione la dificultad para comenzar:</p>
+            <div class="difficulty-selector">
+                <button onclick="startGame('easy')">Fácil</button>
+                <button onclick="startGame('medium')">Medio</button>
+                <button onclick="startGame('hard')">Difícil</button>
+            </div>
+            <div id="instructions">
+                <h2>Instrucciones</h2>
+                <p>Seleccione la dificultad para comenzar el juego. Arrastre y suelte las piezas para completar la imagen.</p>
+            </div>
+            <div id="puzzle-container"></div>
+        </div>
+        <div id="winModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <p>¡Ganaste! ¿Quieres volver a jugar?</p>
+                <button onclick="startGame('easy')">Fácil</button>
+                <button onclick="startGame('medium')">Medio</button>
+                <button onclick="startGame('hard')">Difícil</button>
+            </div>
+        </div>
+        <script src="js/rompecabeza.js"></script>
+        <button class="btn btn-secondary mt-4" onclick="location.href='index.html'">Volver al Inicio</button>
+        
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/imagenes.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cronometro.js"></script>
+    <script src="js/modalScore.js"></script>
+</body>
+</html>

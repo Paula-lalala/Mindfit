@@ -1,0 +1,410 @@
+/*VARIABLES*/
+:root {
+    --rowNum: 4;
+    --colNum: 4;
+    --gridHeight: 128px;
+    --gridWidht: 128px;
+}
+
+/*FUENTES*/
+@font-face {
+    font-family: 'nunito';
+    src: url('fonts/nunito/Nunito-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nunito';
+    src: url('fonts/nunito/Nunito-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nunito';
+    src: url('fonts/nunito/Nunito-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'nunito';
+    src: url('fonts/nunito/Nunito-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #FF9F9F;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 90%; /* Ajusta el ancho máximo según sea necesario */
+    margin:auto; /* Centra el contenido horizontalmente */
+    padding: 10px; /* Añade espacio en los lados */
+    color: #f8f9fa;
+    background-color: #ff4967;
+    border-radius: 20px;
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Nunito';
+    color: #ff4967;
+    margin-bottom: 0; /* Elimina el margen inferior */
+}
+
+header h1{
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.navbar {
+    font-family: 'Nunito';
+    color: #ff4967;
+    margin-bottom: 0;
+}
+.navbar-brand{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+p{
+    font-size: 22px;
+}
+
+a{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+.numPartidas, .maxPuntos, .puntos, .reloj {    
+    font-family: 'Nunito';
+}
+
+/*PARTIDAS*/
+.numPartidas {
+    grid-area: numPartidas;   
+}
+
+/*PUNTOS*/
+.maxPuntos {
+    grid-area: maxPuntos;
+}
+
+.puntos {
+    grid-area: puntos;
+}
+
+/*CRONOMETRO*/
+.cronometro {
+    grid-area: cronometro;
+}
+
+.reloj {
+    display: inline;
+    font-weight: bold;
+}
+
+/* TABLERO */
+.wrapper {
+    grid-area: baraja;
+    padding: 2%;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: repeat(var(--rowNum), var(--gridHeight));
+    grid-template-columns: repeat(var(--colNum), var(--gridWidht));
+    gap: 20px;
+}
+
+/* CARTAS */
+.carta {
+    grid-column-start: auto;
+    grid-row-start: auto; 
+    
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 1s;
+    width: var(--gridWidht);
+    height: var(--gridHeight);
+}
+
+/* IMAGEN FRONT CARTA */
+input[type='image'] {
+    background: rgb(240, 240, 240);    
+    border-radius: 12px;     
+}
+
+.face {
+    position: absolute;
+    width: var(--gridWidht);
+    height: var(--gridHeight);
+}
+
+.back {
+    transform: rotateY(0deg) scale(1);
+    backface-visibility: hidden;
+}
+
+/* ANIMACIONES CARTA GIRAR Y CRECER */
+.mostrar {
+    transform: rotateY(180deg) scale(1.12);
+    -ms-transform: rotateY(180deg) scale(1.12); /* IE 9  */
+    -moz-transform: rotateY(180deg) scale(1.12); /* Firefox */
+    -webkit-transform: rotateY(180deg) scale(1.12); /* Safari and Chrome */
+    -o-transform: rotateY(180deg) scale(1.12); /* Opera */
+}
+
+.ocultar {
+    transform: rotateY(0deg) scale(1);
+    -ms-transform: rotateY(0deg) scale(1); /* IE 9  */
+    -moz-transform: rotateY(0deg) scale(1); /* Firefox */
+    -webkit-transform: rotateY(0deg) scale(1); /* Safari and Chrome */
+    -o-transform: rotateY(0deg) scale(1); /* Opera */
+}
+
+.back input[type='image']:hover {
+    border: 2px solid rgb(195, 0, 255);    
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+
+/* BLOQUEO TABLERO */
+.wrapper.bloquear {
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.bloquear input[type='image']:hover {
+    border: none;
+    box-shadow: none;
+}
+
+/* MODAL */
+.modalDialog {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.hide {
+    display: none;
+}
+
+.modal-content {
+    width: 60%;
+    margin: 5% auto;
+    border-radius: 5px;
+    background: #fff;
+    text-align: center;
+    display: grid;
+    gap: 5px;
+}
+
+.modal-header {
+    color: #ff5773; /* Cambiar color del texto a rosa */
+    padding-top: 3%;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Nunito'; /* Cambiar la fuente */
+    font-weight: bold;
+}
+#intruccionesCss{
+    font-size: 30px;
+}
+.modal-body {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+    padding: 3%;    
+}
+
+.modal-body button{
+    font-size: 30px;
+}
+
+.btn {
+    font-size: 70px;
+    background-color: #ff788f; /* Cambiar color de fondo a rosa */
+    color: white; /* Cambiar color del texto a blanco */
+    border-radius: 20px; /* Agregar radio de borde */
+    padding: 5px 5px; /* Ajustar relleno */
+    font-weight: bold; /* Ajustar peso de la fuente */
+
+}
+
+
+/*MODAL PUNTOS*/
+.modal-score-body {
+    display: grid;
+    justify-content: space-around;
+    padding: 2%;
+}
+
+.tabla {
+    grid-auto-flow: column;    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer {
+    margin: 5% 5% 0 10%;
+    gap: 12px;
+}
+
+.titlePtos {
+    font-family: 'Nunito';
+    font-size: small;
+}
+
+/*MODAL PARTIDAS*/
+.modal-tscore-body {
+    display: grid;
+    padding: 2%;
+}
+
+.tPartidas {
+    grid-auto-flow: column;    
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+
+/*BOTONES*/
+
+.btn:hover {
+    background-color: #ff99aa;
+    border: 3px solid #ff4967;
+    padding: 4px 12px;
+    color: #f8f9fa;
+}
+
+.btn.cancel {
+    background-color: firebrick;
+}
+
+.btn.cancel:hover {
+    background-color: firebrick;
+    border: 3px solid darkred;
+    padding: 4px 12px;
+}
+
+.btn.neutral {
+    background-color: gray;
+}
+
+.btn.neutral:hover {
+    background-color: gray;
+    border: 3px solid darkslategray;
+    padding: 4px 12px;
+}
+
+.boton_volver_cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn.volver{
+    background-color: #ff1818;
+    margin: 20px;
+    font-size: 30px;
+}
+
+#winModal{
+    display: none;
+}
+.ganador {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.ganador-content {
+    background-color: #fff8dc;
+    margin: auto;
+    padding: 30px;
+    border: 2px solid #ffa07a;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close {
+    color: #ff4500;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #ff6347;
+    text-decoration: none;
+}
+
+.ganador-header {
+    background-color: #ffeb3b;
+    padding: 10px;
+    border-bottom: 2px solid #ffa07a;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.ganador-body {
+    padding: 20px;
+    color: #008080;
+}
+
+.ganador-footer {
+    background-color: #ffeb3b;
+    padding: 10px;
+    border-top: 2px solid #ffa07a;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.button-ganador {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button-ganador:hover {
+    background-color: #ff4500;
+}   

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Memoria</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mediumWindows.css">
+    <link rel="stylesheet" href="css/smallWindows.css">
+    <link rel="stylesheet" href="css/verticalWindows.css">
+    <link rel="stylesheet" href="plugin/introJS/introjs.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Mindfit Games</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header class="text-center">
+        <h1>JUEGO DE MEMORIA</h1>
+    </header>
+    <div class="modal-content">
+        <H1 class="modal-header"> MindFit Games: Diviértete y Mejora tu Salud Mental </H1>
+        <div class="modal-header" id="intruccionesCss" > En los siguientes botones puedes escoger la dificultad para el juego dememoria</div>
+        <div id="modal-body" class="modal-body">
+            <div id="dificultadBtn" class="modal-body">
+                <button id="facil" class="btn"> Fácil </button>
+                <button id="medio" class="btn"> Medio </button>
+                <button id="dificil" class="btn"> Díficil </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="winModal" class="ganador">
+    <div class="ganador-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p>¡Ganaste! ¿Quieres volver a jugar?</p>
+        <button class= "button-ganador" onclick="restartGame()">Sí</button>
+    </div>
+</div>
+
+
+<div class="container">
+    <div id="wrapper" class="wrapper"></div>
+</div>
+<div class="boton_volver_cont">
+    <button class="btn volver" onclick="location.href='index.html'">Volver al Inicio</button>
+</div>
+
+
+<script src="js/cronometro.js"></script>
+<script src="js/imagenes.js"></script>
+<script src="js/modalScore.js"></script>
+<script src="plugin/introJS/intro.js"></script>
+<script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/imagenes.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cronometro.js"></script>
+    <script src="js/modalScore.js"></script>
+</body>
+</html>

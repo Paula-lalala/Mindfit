@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'nunito';
+    src: url('fonts/nunito/Nunito-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nunito';
+    src: url('fonts/nunito/Nunito-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nunito';
+    src: url('fonts/nunito/Nunito-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'nunito';
+    src: url('fonts/nunito/Nunito-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+body {
+    background-color: #212369f2;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito';
+}
+
+.navbar-brand{
+    font-family: 'Nunito';
+    font-size: 30px;
+}
+.container {
+    width: 100%;
+    max-width: 1200px; /* Ajusta el ancho máximo según sea necesario */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    padding: 0 20px; /* Añade espacio en los lados */
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 0px 0;
+    text-align: center;
+    font-family: 'Nunito';
+    color: #375AA9;
+    margin-bottom: 20px; /* Elimina el margen inferior */
+}
+
+header h1{
+    text-align: center;
+    font-family: 'Nunito';
+    font-size: 70px;
+}
+
+.navbar {
+
+    font-family: 'Nunito';
+    font-weight: bold;
+    font-size: 30px;
+    color: #375AA9;
+    margin-bottom: 0;
+}
+
+
+p{
+    font-size: 22px;
+}
+
+.carousel-item {
+    position: relative;
+    height: 500px;
+    color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 40px; /* Aumenta la separación inferior */
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    border-radius: 15px;
+    opacity: 0.6; /* Cambia a 0.7 para mantener la opacidad */
+}
+
+.carousel-item .d-flex {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    z-index: 1;
+    text-align: center;
+}
+
+.carousel-item h2,
+.carousel-item p {
+    margin-bottom: 40px;
+    width: 80%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.881);
+}
+
+.carousel-item button {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    border-color: rgb(255, 255, 255);
+    border-radius: 20px; /* Aplica bordes redondos a los botones */
+}
+
+
+
+footer {
+    background-color: #f8f9fa;
+    padding: 40px 0; /* Aumenta el espacio en el footer */
+    text-align: center;
+}
+
+
+.game-section {
+    background-color: #f9f9f9;
+    padding: 50px;
+}
+.game-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    height: 100%;
+}
+.game-card h3 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+.game-card img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+
+
+
