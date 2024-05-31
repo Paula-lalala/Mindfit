@@ -4,6 +4,8 @@ let puzzleImages = {
     hard: 'img/goku.jpg'
 };
 
+let imageSrc = puzzleImages["easy"];
+createPuzzle(imageSrc, 2);
 let correctOrder = [];
 let currentOrder = [];
 function startGame(difficulty) {
